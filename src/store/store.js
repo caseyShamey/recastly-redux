@@ -5,10 +5,15 @@ import rootReducer from './../reducers/main.js';
 // TODO:  Create your redux store, apply thunk as a middleware, and export it!
 
 //template to consult when writing state
-// export default function configureStore(initialState) {
+// var configureStore = () => {
 //   return createStore(
 //     rootReducer,
-//     initialState,
 //     applyMiddleware(thunk)
 //   );
-// }
+// };
+
+
+
+var store = createStore(rootReducer, ['Use Redux'], applyMiddleware(thunk));
+
+export default store;
