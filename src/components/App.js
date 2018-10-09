@@ -13,10 +13,10 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      videos: [],
-      currentVideo: null
-    };
+    // this.state = {
+    //   videos: [],
+    //   currentVideo: null
+    // };
   }
 
   componentDidMount() {
@@ -46,8 +46,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <SearchContainer />
-        {/* <Nav handleSearchInputChange={this.getYouTubeVideos.bind(this)}/> */}
+        {/* <SearchContainer /> */}
+        <Nav handleSearchInputChange={this.getYouTubeVideos.bind(this)}/>
         <div className="row">
           <div className="col-md-7">
             <VideoPlayerContainer/>

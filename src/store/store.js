@@ -14,6 +14,6 @@ import rootReducer from './../reducers/main.js';
 
 
 
-var store = createStore(rootReducer, ['Use Redux'], applyMiddleware(thunk));
+var store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;
