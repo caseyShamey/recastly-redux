@@ -1,7 +1,7 @@
 import React from 'react';
 import VideoListEntry from './VideoListEntry.js';
 
-var VideoList = ({videos, handleVideoListEntryTitleClick}) => (
+var VideoList = ({videos, handleVideoListEntryTitleClick, videoDetailsHandler}) => (
   <div className="video-list">
     {
       videos.map(video => (
@@ -9,6 +9,7 @@ var VideoList = ({videos, handleVideoListEntryTitleClick}) => (
           key={video.etag}
           video={video}
           handleVideoListEntryTitleClick={handleVideoListEntryTitleClick}
+          videoDetailsHandler={videoDetailsHandler}
         />
       ))
     }

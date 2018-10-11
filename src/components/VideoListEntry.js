@@ -1,6 +1,7 @@
 import React from 'react';
+import VideoDetails from './VideoDetails.js';
 
-var VideoListEntry = ({video, handleVideoListEntryTitleClick}) => (
+var VideoListEntry = ({video, handleVideoListEntryTitleClick, videoDetailsHandler}) => (
   <div className="video-list-entry">
     <div className="media-left media-middle">
       <img className="media-object" src={video.snippet.thumbnails.default.url} alt="" />
@@ -13,6 +14,10 @@ var VideoListEntry = ({video, handleVideoListEntryTitleClick}) => (
         {video.snippet.title}
       </div>
       <div className="video-list-entry-detail">{video.snippet.description}</div>
+      <VideoDetails
+        video={video}
+        videoDetailsHandler={videoDetailsHandler}
+      />
     </div>
   </div>
 );

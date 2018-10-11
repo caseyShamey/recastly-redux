@@ -8,6 +8,8 @@ import changeVideo from '../actions/currentVideo.js';
 import changeVideoList from '../actions/videoList.js';
 import exampleVideoData from '../data/exampleVideoData.js';
 import store from '../store/store.js';
+import VideoDetails from './VideoDetails.js';
+
 
 export default class App extends React.Component {
   constructor(props) {
@@ -25,6 +27,10 @@ export default class App extends React.Component {
 
   handleVideoListEntryTitleClick(video) {
     this.setState({currentVideo: video});
+  }
+
+  videoDetailsHandler(e) {
+    console.log(e.target.value);
   }
 
   getYouTubeVideos(query) {

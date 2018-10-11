@@ -8,6 +8,7 @@ var searchYouTube = ({key, query, max = 5}, callback) => {
     videoEmbeddable: 'true'
   })
     .done(({items}) => {
+      console.log(items)
       if (callback) {
         callback(items);
       }
